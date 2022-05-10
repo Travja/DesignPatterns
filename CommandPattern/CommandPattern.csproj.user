@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</Source>
+    <SmallTileSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</SmallTileSource>
+    <MediumTileSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</MediumTileSource>
+    <WideTileSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</WideTileSource>
+    <LargeTileSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</LargeTileSource>
+    <AppIconSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</AppIconSource>
+    <SplashScreenSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</SplashScreenSource>
+    <PackageLogoSource>C:\Users\Travja\OneDrive - Neumont College of Computer Science\2022\Spring\Design Principles\CommandPattern\Assets\download.jpg</PackageLogoSource>
+  </PropertyGroup>
+</Project>
