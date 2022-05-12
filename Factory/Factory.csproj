@@ -119,12 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Component\Element\ElementOptions.cs" />
-    <Compile Include="Component\Element\HtmlButton.cs" />
-    <Compile Include="Component\Element\HtmlText.cs" />
-    <Compile Include="Component\Element\IElement.cs" />
-    <Compile Include="Component\Element\UwpButton.cs" />
-    <Compile Include="Component\Element\UwpText.cs" />
+    <Compile Include="Component\Elements\ElementOptions.cs" />
+    <Compile Include="Component\Elements\HtmlButton.cs" />
+    <Compile Include="Component\Elements\HtmlText.cs" />
+    <Compile Include="Component\Elements\Element.cs" />
+    <Compile Include="Component\Elements\UwpButton.cs" />
+    <Compile Include="Component\Elements\UwpText.cs" />
     <Compile Include="Component\Factory\BaseFactory.cs" />
     <Compile Include="Component\Factory\HtmlElementFactory.cs" />
     <Compile Include="Component\Factory\UwpElementFactory.cs" />

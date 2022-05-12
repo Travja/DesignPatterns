@@ -9,8 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <RadioButton Content="RadioButton" Margin="108,449,0,0" VerticalAlignment="Top"/>
-        <Slider HorizontalAlignment="Left" Margin="650,743,0,0" VerticalAlignment="Top" Width="100"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox x:Name="listbox"/>
 
+        <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">Create Page</Button>
     </Grid>
 </Page>

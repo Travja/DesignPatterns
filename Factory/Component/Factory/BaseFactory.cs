@@ -1,4 +1,4 @@
-﻿using Factory.Component.Element;
+﻿using Factory.Component.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +10,15 @@ namespace Factory.Component
     public interface BaseFactory
     {
 
-        IElement CreateButton();
+        Element CreateButton(string contents, ElementOptions options);
 
-        IElement CreateText();
+        Element CreateText(string contents, ElementOptions options);
 
-        string ConstructPage(List<IElement> elements);
+        void AddElement(Element element);
+
+        Element RemoveElement();
+
+        string ConstructPage(List<Element> elements);
 
     }
 }
