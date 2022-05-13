@@ -19,7 +19,7 @@ namespace Factory.Component.Elements
             var style = "HorizontalAlignment=\"Left\" VerticalAlignment=\"Top\" ";
             style += $"Margin=\"{Options.Left},{Options.Top},0,0\" ";
             style += $"Width=\"{Options.Width}\" ";
-            style += $"Height=\"{Options.Height}\" ";
+            style += $"Height=\"{Options.Height}\"";
 
             return
             $@"<TextBlock {style}>

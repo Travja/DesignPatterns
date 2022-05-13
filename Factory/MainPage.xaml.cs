@@ -27,12 +27,10 @@ namespace Factory
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private BaseFactory _factory;
         private readonly ObservableCollection<Element> _elements = new ObservableCollection<Element>();
 
         public MainPage()
         {
-            _factory = new HtmlElementFactory();
             this.InitializeComponent();
         }
 
@@ -111,6 +109,12 @@ namespace Factory
             messageDialog.CancelCommandIndex = 1;
 
             await messageDialog.ShowAsync();
+        }
+
+        private void RemoveElement(object sender, RoutedEventArgs e)
+        {
+            var elm = ElementList.SelectedItem as Element;
+            _elements.Remove(elm);
         }
     }
 }

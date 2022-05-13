@@ -27,7 +27,7 @@ namespace Factory.Component.Elements
 
         public override string ToString()
         {
-            return $"{_name}: top={Options.Top} left={Options.Left} width={Options.Width} height={Options.Height}";
+            return $"{_name}: content='{Contents}' top={Options.Top} left={Options.Left} width={Options.Width} height={Options.Height}";
         }
     }
 }
