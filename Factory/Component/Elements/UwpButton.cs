@@ -12,7 +12,9 @@ namespace Factory.Component.Elements
         {
         }
 
-        public override string Build()
+        protected override string Name => "UwpButton";
+
+        public override string GetCode()
         {
             var style = "HorizontalAlignment=\"Left\" VerticalAlignment=\"Top\"";
             style += $"Margin=\"{Options.Left},{Options.Top},0,0\"";

@@ -6,8 +6,7 @@ namespace Factory.Component
 {
     public class UwpElementFactory : BaseFactory
     {
-        private Stack<Element> _elements = new Stack<Element>();
-        private const string format =
+        public UwpElementFactory() : base(
             @"<Page
                 x:Class=""Factory.MainPage""
                 xmlns = ""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
@@ -20,33 +19,17 @@ namespace Factory.Component
                 <Grid>
                     ${elements}
                 </Grid>
-            </Page>";
+            </Page>")
+        { }
 
-        public Element CreateButton(string contents, ElementOptions options)
+        public override Element CreateButton(string contents, ElementOptions options)
         {
             return new UwpButton(contents, options);
         }
 
-        public Element CreateText(string contents, ElementOptions options)
+        public override Element CreateText(string contents, ElementOptions options)
         {
             return new UwpText(contents, options);
-        }
-
-        public void AddElement(Element element)
-        {
-            _elements.Push(element);
-        }
-
-        public Element RemoveElement()
-        {
-            return _elements.Pop();
-        }
-
-        public string ConstructPage(List<Element> elements)
-        {
-            var ret = format.Replace("${elements}", string.Join("\n", elements.Select(e => e.Build())));
-
-            return ret;
         }
     }
 }

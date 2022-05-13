@@ -12,13 +12,15 @@ namespace Factory.Component.Elements
         {
         }
 
-        public override string Build()
+        protected override string Name => "HtmlText";
+
+        public override string GetCode()
         {
             var style = "position: absolute; ";
-            style += $"left: {Options.Left}; ";
-            style += $"top: {Options.Top}; ";
-            style += $"width: {Options.Width}; ";
-            style += $"height: {Options.Height};";
+            style += $"left: {Options.Left}px; ";
+            style += $"top: {Options.Top}px; ";
+            style += $"width: {Options.Width}px; ";
+            style += $"height: {Options.Height}px;";
 
             return 
             $@"<div style='{style}'>

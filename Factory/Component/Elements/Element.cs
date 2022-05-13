@@ -8,6 +8,7 @@ namespace Factory.Component.Elements
 {
     public abstract class Element
     {
+        protected abstract string Name { get; }
         protected string Contents { get; set; }
         protected ElementOptions Options { get; set; }
         public Element(string contents, ElementOptions options)
@@ -16,6 +17,11 @@ namespace Factory.Component.Elements
             Options = options;
         }
 
-        public abstract string Build();
+        public abstract string GetCode();
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

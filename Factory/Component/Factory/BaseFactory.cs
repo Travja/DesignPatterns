@@ -7,18 +7,38 @@ using System.Threading.Tasks;
 
 namespace Factory.Component
 {
-    public interface BaseFactory
+    public abstract class BaseFactory
     {
+        protected string _format;
 
-        Element CreateButton(string contents, ElementOptions options);
+        protected BaseFactory(string format)
+        {
+            _format = format;
+        }
 
-        Element CreateText(string contents, ElementOptions options);
+        public Element CreateElement(string type, string contents, ElementOptions options)
+        {
+            switch (type)
+            {
+                case "Button":
+                    return CreateButton(contents, options);
+                case "Text":
+                    return CreateText(contents, options);
+                default:
+                    throw new ArgumentException($"{type} is not a recognized element");
+            }
+        }
 
-        void AddElement(Element element);
+        public abstract Element CreateButton(string contents, ElementOptions options);
 
-        Element RemoveElement();
+        public abstract Element CreateText(string contents, ElementOptions options);
 
-        string ConstructPage(List<Element> elements);
+        public string ConstructPage(List<Element> elements)
+        {
+            var ret = _format.Replace("${elements}", string.Join("\n", elements.Select(e => e.GetCode())));
+
+            return ret;
+        }
 
     }
 }
