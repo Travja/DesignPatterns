@@ -16,10 +16,10 @@ namespace Factory.Component.Elements
 
         public override string GetCode()
         {
-            var style = "HorizontalAlignment=\"Left\" VerticalAlignment=\"Top\"";
-            style += $"Margin=\"{Options.Left},{Options.Top},0,0\"";
-            style += $"Width=\"{Options.Width}\"";
-            style += $"Height=\"{Options.Height}\"";
+            var style = "HorizontalAlignment=\"Left\" VerticalAlignment=\"Top\" ";
+            style += $"Margin=\"{Options.Left},{Options.Top},0,0\" ";
+            style += $"Width=\"{Options.Width}\" ";
+            style += $"Height=\"{Options.Height}\" ";
 
             return
             $@"<Button {style}>
